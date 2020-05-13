@@ -1,0 +1,15 @@
+!Model
+Id: c431cf00-329b-467c-afa6-f0282d26457d
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file RotationRingBig.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    286c58aa9070bdd72d3ab99831fddd42:
+        Name: VoidMaterial
+        MaterialInstance:
+            Material: null
+Modifiers: {}
+~SourceHashes:
+    5d2217e03ff93ac6080a06e8c9b9086d~RotationRingBig.fbx: fb57f9bc2a687fc6c0dc27f564c8270f

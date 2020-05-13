@@ -1,0 +1,16 @@
+!Model
+Id: e833d5c2-a0eb-4457-abd3-a583e4368aca
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file RotationRing.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    9fc80634c8eb5648005fbc4fa1d07729:
+        Name: VoidMaterial
+        MaterialInstance:
+            Material: null
+            IsShadowCaster: false
+Modifiers: {}
+~SourceHashes:
+    e5cf723c3d8a82e0d897956056d363c4~RotationRing.fbx: def32bb9ff58e825c141e2493e8d908b

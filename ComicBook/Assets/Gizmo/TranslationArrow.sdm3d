@@ -1,0 +1,15 @@
+!Model
+Id: 0b30341f-9cb4-4bff-94d2-e96d9491d86c
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file TranslationArrow.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    d56d9f7e49851bd0616cbbf94d4dd557:
+        Name: VoidMaterial
+        MaterialInstance:
+            Material: null
+Modifiers: {}
+~SourceHashes:
+    3f88b736be4f1b31bd148e2a8ae1d3d6~TranslationArrow.fbx: 0c4d0e3582983b715e85d3155f4d7f1d

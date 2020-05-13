@@ -1,0 +1,33 @@
+!Package
+SerializedVersion: {Assets: 3.1.0.0}
+Meta:
+    Name: ComicBook.Windows
+    Version: 1.0.0
+    Authors: []
+    Owners: []
+    Dependencies: null
+AssetFolders:
+    -   Path: !dir Assets
+ResourceFolders:
+    - !dir Resources
+OutputGroupDirectories: {}
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets:
+    - 0b30341f-9cb4-4bff-94d2-e96d9491d86c:Gizmo/TranslationArrow
+    - 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+    - 1af054ad-de65-4b55-8082-af0403afd925:Gizmo/SelectionMarkerMat
+    - 294806fb-eea6-4bba-b86c-80ffea985b56:Gizmo/TransformAxisY
+    - 2989f59d-3a00-4df2-9209-fe93f3eccbd7:Gizmo/TransformAxisX
+    - 3ffcd7c7-3b49-4cbf-a68b-3568d8c63213:Gizmo/HighlightMarkerMat
+    - 4467d460-66bf-450e-9ea7-6ed5f7576a59:Gizmo/TransformGizmo
+    - 651b9915-7d19-4e77-bbae-18bad7e3b262:Gizmo/SelectionBox
+    - 94bfd4f2-5a8e-419c-b532-810c65b70275:Gizmo/RotationRingCollider
+    - b37b59a1-3dbe-464e-b9b3-a7de9d0c8c69:Gizmo/TransformAxisZ
+    - c10c6375-b8a6-4899-b3bd-da09473e8ca6:Gizmo/TranslationPlane
+    - c2afa243-a994-468d-b9a6-e7ca286c71b1:Gizmo/TransformAxisC
+    - c431cf00-329b-467c-afa6-f0282d26457d:Gizmo/RotationRingBig
+    - c76800a5-1dab-4965-b4de-594b35f066d2:Gizmo/TranslationPlaneCollider
+    - dcf1b4fa-bed5-4caf-8737-26e0ac72dabe:Gizmo/TranslationArrowCollider
+    - e833d5c2-a0eb-4457-abd3-a583e4368aca:Gizmo/RotationRing

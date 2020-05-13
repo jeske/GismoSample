@@ -1,0 +1,15 @@
+!Model
+Id: c10c6375-b8a6-4899-b3bd-da09473e8ca6
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file TranslationPlane.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    601c5c759bd069dab2ef0a1c8956a22f:
+        Name: VoidMaterial
+        MaterialInstance:
+            Material: null
+Modifiers: {}
+~SourceHashes:
+    e71e4d38619967715350c8883e08fcfa~TranslationPlane.fbx: 7b4d2110bac5cc810d89820fa99c225d

@@ -1,0 +1,21 @@
+!ColliderShapeAsset
+Id: 94bfd4f2-5a8e-419c-b532-810c65b70275
+SerializedVersion: {Stride: 3.0.0.0}
+Tags: []
+ColliderShapes:
+    c5c3b459258493aebf796b71a709daec: !ConvexHullColliderShapeDesc
+        ConvexHulls: null
+        ConvexHullsIndices: null
+        Model: e833d5c2-a0eb-4457-abd3-a583e4368aca:Gizmo/RotationRing
+        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        Scaling: {X: 1.0, Y: 1.0, Z: 1.0}
+        Decomposition:
+            Depth: 5
+            PosSampling: 10
+            AngleSampling: 10
+            PosRefine: 5
+            AngleRefine: 5
+            Alpha: 0.01
+            Threshold: 0.01
+            Enabled: true

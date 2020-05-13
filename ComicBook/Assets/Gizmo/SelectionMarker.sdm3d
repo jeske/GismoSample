@@ -1,0 +1,16 @@
+!Model
+Id: 1a928305-5422-4d88-8158-0519e82112fe
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file SelectionMarker.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    0f1be2450b9885b80347041158815a45:
+        Name: SelectionMarkerMat
+        MaterialInstance:
+            Material: 1af054ad-de65-4b55-8082-af0403afd925:Gizmo/SelectionMarkerMat
+            IsShadowCaster: false
+Modifiers: {}
+~SourceHashes:
+    345aaca3227ab8dfb979209844725d9a~SelectionMarker.fbx: 32b9014a8586572bd0daee4647671ef8

@@ -1,0 +1,17 @@
+!MaterialAsset
+Id: 1af054ad-de65-4b55-8082-af0403afd925
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Attributes:
+    Emissive: !MaterialEmissiveMapFeature
+        EmissiveMap: !ComputeTextureColor
+            FallbackValue:
+                Value: {R: 0.0, G: 0.98775, B: 0.135815665, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
+        Intensity: !ComputeFloat
+            Value: 3.0
+    Overrides:
+        UVScale: {X: 1.0, Y: 1.0}
+Layers: {}

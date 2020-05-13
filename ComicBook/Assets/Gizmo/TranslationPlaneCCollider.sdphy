@@ -1,0 +1,21 @@
+!ColliderShapeAsset
+Id: c9db0d27-780e-41ee-9c10-d40711679ec3
+SerializedVersion: {Stride: 3.0.0.0}
+Tags: []
+ColliderShapes:
+    ddaf0748cdbc093bcae18055a187cc1f: !ConvexHullColliderShapeDesc
+        ConvexHulls: null
+        ConvexHullsIndices: null
+        Model: 1bbddc93-8bc6-4b18-ab88-64dcae509091:Gizmo/TranslationPlaneC
+        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        Scaling: {X: 1.0, Y: 1.0, Z: 1.0}
+        Decomposition:
+            Depth: 10
+            PosSampling: 10
+            AngleSampling: 10
+            PosRefine: 5
+            AngleRefine: 5
+            Alpha: 0.01
+            Threshold: 0.01
+            Enabled: false

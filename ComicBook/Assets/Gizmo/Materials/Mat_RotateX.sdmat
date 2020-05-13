@@ -1,0 +1,14 @@
+!MaterialAsset
+Id: 322cb5ca-a3e9-4ec4-91b3-9dfbdca78ded
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Archetype: 2989f59d-3a00-4df2-9209-fe93f3eccbd7:Gizmo/TransformAxisX
+Attributes:
+    Emissive: !MaterialEmissiveMapFeature
+        EmissiveMap: !ComputeColor
+            Value: {R: 1.0, G: 0.0, B: 0.0, A: 1.0}
+        Intensity: !ComputeFloat
+            Value: 0.1
+    Overrides:
+        UVScale: {X: 1.0, Y: 1.0}
+Layers: {}

@@ -1,0 +1,21 @@
+!ColliderShapeAsset
+Id: 2de40d89-fe6e-4671-8c5c-0a38bfe17e42
+SerializedVersion: {Stride: 3.0.0.0}
+Tags: []
+ColliderShapes:
+    81239921d7641c7aa02f958e9c09bdc8: !ConvexHullColliderShapeDesc
+        ConvexHulls: null
+        ConvexHullsIndices: null
+        Model: 5021a680-4d04-4268-935f-a9c638ac9abe:Teapot
+        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        Scaling: {X: 1.0, Y: 1.0, Z: 1.0}
+        Decomposition:
+            Depth: 10
+            PosSampling: 10
+            AngleSampling: 10
+            PosRefine: 5
+            AngleRefine: 5
+            Alpha: 0.01
+            Threshold: 0.01
+            Enabled: false

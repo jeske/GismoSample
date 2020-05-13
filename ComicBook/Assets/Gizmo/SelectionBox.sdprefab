@@ -1,0 +1,137 @@
+!PrefabAsset
+Id: 651b9915-7d19-4e77-bbae-18bad7e3b262
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 806c84bb-dc63-45a7-b700-d53a9ab1d448
+        - ref!! 66e61ef1-5a51-4f95-b283-a96753a808aa
+        - ref!! 829d797a-7d5a-4072-a2fa-39f8ceff5f8a
+        - ref!! 128eb3ee-4d25-41ee-8fbe-b6b04713254c
+        - ref!! 19bed565-815e-4f6e-ac69-f7ce83c60fe5
+        - ref!! 1dd00836-d55e-4d69-a955-3221d05dbb8d
+        - ref!! 6080aff6-5748-4c7b-b3e5-d19d576791e9
+        - ref!! 44fd0171-ac8e-4d1d-be1c-4aba5f1a6d8b
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 128eb3ee-4d25-41ee-8fbe-b6b04713254c
+                Name: Marker3
+                Components:
+                    884cfca872f8003b834a47d8ffaa46cb: !TransformComponent
+                        Id: aba75ef8-9307-42f5-b984-fd7385e2ae06
+                        Position: {X: -0.8393364, Y: -0.6335645, Z: 0.967273}
+                        Rotation: {X: -1.77635684E-15, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
+                        Id: 132b8b4d-df9a-4b9d-bbd4-4bd462a0825a
+                        Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Entity:
+                Id: 19bed565-815e-4f6e-ac69-f7ce83c60fe5
+                Name: Marker4
+                Components:
+                    884cfca872f8003b834a47d8ffaa46cb: !TransformComponent
+                        Id: 5e85989f-9ab5-4950-bbbe-c823e2f3daa1
+                        Position: {X: -0.436824441, Y: 0.517854035, Z: -0.7172915}
+                        Rotation: {X: 0.5, Y: 0.49999994, Z: 0.49999994, W: -0.5}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
+                        Id: bcd4ebed-69fa-4729-8f1b-00a6f740e989
+                        Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Entity:
+                Id: 1dd00836-d55e-4d69-a955-3221d05dbb8d
+                Name: Marker5
+                Components:
+                    884cfca872f8003b834a47d8ffaa46cb: !TransformComponent
+                        Id: 8b5f06b6-fc46-4578-8bfe-0f973858ec35
+                        Position: {X: 0.6160147, Y: 0.460062951, Z: -0.8228825}
+                        Rotation: {X: 0.707106769, Y: -3.090862E-08, Z: 0.707106769, W: -3.090862E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
+                        Id: a7558ba4-e37c-4236-8ace-d8e4668e497a
+                        Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Entity:
+                Id: 44fd0171-ac8e-4d1d-be1c-4aba5f1a6d8b
+                Name: Marker7
+                Components:
+                    884cfca872f8003b834a47d8ffaa46cb: !TransformComponent
+                        Id: 0373a77f-c285-46c6-82fd-84c960cf535f
+                        Position: {X: -0.6505779, Y: -0.5295648, Z: -0.827384949}
+                        Rotation: {X: 0.0, Y: -0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
+                        Id: 3c7755b2-d5b3-4c21-bf21-af8e57e84ddc
+                        Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Entity:
+                Id: 6080aff6-5748-4c7b-b3e5-d19d576791e9
+                Name: Marker6
+                Components:
+                    884cfca872f8003b834a47d8ffaa46cb: !TransformComponent
+                        Id: c53d5cf7-7d44-494a-938e-d8bdba9ab78f
+                        Position: {X: 0.7832141, Y: -0.5295648, Z: -0.772945642}
+                        Rotation: {X: 0.49999994, Y: 0.5, Z: 0.5, W: 0.49999994}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
+                        Id: 3cc9fec7-04b3-4d84-937c-8994ae71c082
+                        Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 66e61ef1-5a51-4f95-b283-a96753a808aa
+                Name: Marker1
+                Components:
+                    884cfca872f8003b834a47d8ffaa46cb: !TransformComponent
+                        Id: 23e1b527-d5cc-4d9b-8751-ad3e8ba7ece7
+                        Position: {X: 0.8654218, Y: 0.419402838, Z: 1.02090073}
+                        Rotation: {X: -0.49999997, Y: 0.49999997, Z: -0.49999997, W: 0.49999997}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
+                        Id: 57b10676-50a5-4e5e-b2c9-dea7c76c6080
+                        Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Entity:
+                Id: 806c84bb-dc63-45a7-b700-d53a9ab1d448
+                Name: Marker0
+                Components:
+                    884cfca872f8003b834a47d8ffaa46cb: !TransformComponent
+                        Id: 4e259c36-9bf0-40e8-bf5a-ba5724a3148a
+                        Position: {X: -0.617503643, Y: 0.419402838, Z: 1.04564762}
+                        Rotation: {X: -0.707106769, Y: 0.0, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
+                        Id: 5318be13-7139-413d-8546-a1cb45ca385a
+                        Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Entity:
+                Id: 829d797a-7d5a-4072-a2fa-39f8ceff5f8a
+                Name: Marker2
+                Components:
+                    884cfca872f8003b834a47d8ffaa46cb: !TransformComponent
+                        Id: 13264fb3-f28b-43ae-8047-5f36f4b1555e
+                        Position: {X: 0.7306057, Y: -0.6379547, Z: 0.8480468}
+                        Rotation: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
+                        Id: e128ea07-78f4-46da-b128-7c9fe5e177a4
+                        Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        IsShadowCaster: false
+                        Materials: {}
