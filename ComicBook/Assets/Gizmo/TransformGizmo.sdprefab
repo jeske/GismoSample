@@ -21,8 +21,7 @@ Hierarchy:
                         Model: c10c6375-b8a6-4899-b3bd-da09473e8ca6:Gizmo/TranslationPlane
                         RenderGroup: Group1
                         IsShadowCaster: false
-                        Materials:
-                            1d8c865ff2cfad6e99f4dc3733c79462~0: 1a28ec52-7fc5-456a-b805-c4559085b6ac:Gizmo/Materials/Mat_Translate_YZ
+                        Materials: {}
                     e54a0d4bcd9957353b815b438b3c3dd2: !RigidbodyComponent
                         Id: 31728caa-08bc-45e9-9473-5bee441bed1c
                         CollisionGroup: CustomFilter1
@@ -59,8 +58,7 @@ Hierarchy:
                         Model: e833d5c2-a0eb-4457-abd3-a583e4368aca:Gizmo/RotationRing
                         RenderGroup: Group1
                         IsShadowCaster: false
-                        Materials:
-                            4e0d126e8c20aff4a8efc5222bb07ed9~0: 322cb5ca-a3e9-4ec4-91b3-9dfbdca78ded:Gizmo/Materials/Mat_RotateX
+                        Materials: {}
                     4f3acb8076e29da94cb6f7edec9f7559: !RigidbodyComponent
                         Id: 09219cec-ec44-4aa5-b7da-30647530c9b0
                         CollisionGroup: CustomFilter1
@@ -97,8 +95,7 @@ Hierarchy:
                         Model: e833d5c2-a0eb-4457-abd3-a583e4368aca:Gizmo/RotationRing
                         RenderGroup: Group1
                         IsShadowCaster: false
-                        Materials:
-                            05590a866da80ea9b4994e4655a1af80~0: e7a8b884-67a7-4737-aa6c-507793776b53:Gizmo/Materials/Mat_RotateY
+                        Materials: {}
                     b9447885634faaeb4b511e8166cca951: !RigidbodyComponent
                         Id: 290c32ab-5880-4926-8d18-3eb17f7c3bbe
                         CollisionGroup: CustomFilter1
@@ -135,8 +132,7 @@ Hierarchy:
                         Model: e833d5c2-a0eb-4457-abd3-a583e4368aca:Gizmo/RotationRing
                         RenderGroup: Group1
                         IsShadowCaster: false
-                        Materials:
-                            7b14e7868ac672651ecaed608b00b1df~0: 1835e410-70ab-4901-b091-3d52e9e0d8c2:Gizmo/Materials/Mat_RotateZ
+                        Materials: {}
                     e37720a21eb4bbd9f281ac3ab9a71d0c: !RigidbodyComponent
                         Id: 091bdac2-4a89-45b3-b3bc-eed280b337f8
                         CollisionGroup: CustomFilter1
@@ -173,8 +169,7 @@ Hierarchy:
                         Model: c10c6375-b8a6-4899-b3bd-da09473e8ca6:Gizmo/TranslationPlane
                         RenderGroup: Group1
                         IsShadowCaster: false
-                        Materials:
-                            1d8c865ff2cfad6e99f4dc3733c79462~0: 9fc9909a-93ca-404a-9321-4005eeacb1d5:Gizmo/Materials/Mat_TranslateXZ
+                        Materials: {}
                     e54a0d4bcd9957353b815b438b3c3dd2: !RigidbodyComponent
                         Id: 80f3d699-c3d4-4064-bb61-8d206ecfcdd1
                         CollisionGroup: CustomFilter1
@@ -212,8 +207,7 @@ Hierarchy:
                         Model: c431cf00-329b-467c-afa6-f0282d26457d:Gizmo/RotationRingBig
                         RenderGroup: Group1
                         IsShadowCaster: false
-                        Materials:
-                            b3e5adc7a00171a112467fed9ee6ea28~0: 0afd6f8a-ca5d-4b92-886c-4f93776f381f:Gizmo/Materials/Mat_RotateC
+                        Materials: {}
                     4f3acb8076e29da94cb6f7edec9f7559: !RigidbodyComponent
                         Id: 4994e980-c77b-4214-872f-15f3a56b7195
                         CollisionGroup: CustomFilter1
@@ -250,8 +244,7 @@ Hierarchy:
                         Model: 1bbddc93-8bc6-4b18-ab88-64dcae509091:Gizmo/TranslationPlaneC
                         RenderGroup: Group1
                         IsShadowCaster: false
-                        Materials:
-                            66dc4f0594e1029e06108cc312b3958b~0: bba3dff1-d8eb-4368-bc70-a102a9724a87:Gizmo/Materials/Mat_TranslateC
+                        Materials: {}
                     e54a0d4bcd9957353b815b438b3c3dd2: !RigidbodyComponent
                         Id: 6297b142-9079-450d-bb63-ed9b22da01b8
                         CollisionGroup: CustomFilter1
@@ -288,8 +281,7 @@ Hierarchy:
                         Model: c10c6375-b8a6-4899-b3bd-da09473e8ca6:Gizmo/TranslationPlane
                         RenderGroup: Group1
                         IsShadowCaster: false
-                        Materials:
-                            1d8c865ff2cfad6e99f4dc3733c79462~0: 50d19c8e-a9fe-4aeb-a6a1-2ab53ceee3cf:Gizmo/Materials/Mat_TranslateXY
+                        Materials: {}
                     e54a0d4bcd9957353b815b438b3c3dd2: !RigidbodyComponent
                         Id: 6ee6a6b4-f0e0-4352-a75c-e45490e4b242
                         CollisionGroup: CustomFilter1
@@ -326,8 +318,7 @@ Hierarchy:
                         Model: 0b30341f-9cb4-4bff-94d2-e96d9491d86c:Gizmo/TranslationArrow
                         RenderGroup: Group1
                         IsShadowCaster: false
-                        Materials:
-                            17124aa828bdd6b8b901bad031c14a8d~0: 7e80be96-a08d-4ebf-945f-57b967154ef8:Gizmo/Materials/Mat_TranslateX
+                        Materials: {}
                     60dbf1312952458f701f4a75ded0956c: !RigidbodyComponent
                         Id: ca93a022-12fd-46ec-9399-8c98ae0bbee7
                         CollisionGroup: CustomFilter1
@@ -364,8 +355,7 @@ Hierarchy:
                         Model: 0b30341f-9cb4-4bff-94d2-e96d9491d86c:Gizmo/TranslationArrow
                         RenderGroup: Group1
                         IsShadowCaster: false
-                        Materials:
-                            fd28d31a5d65e8a6d2b794b6d264acb3~0: 5a13fe7e-810a-49da-802b-be40417f7e34:Gizmo/Materials/Mat_TranslateY
+                        Materials: {}
                     60dbf1312952458f701f4a75ded0956c: !RigidbodyComponent
                         Id: afc8a353-a8a2-4e1e-8297-a76e48cea94e
                         CollisionGroup: CustomFilter1
@@ -422,8 +412,7 @@ Hierarchy:
                         Model: 0b30341f-9cb4-4bff-94d2-e96d9491d86c:Gizmo/TranslationArrow
                         RenderGroup: Group1
                         IsShadowCaster: false
-                        Materials:
-                            a5dd6e72c96b52d3c994a3e94c989339~0: 948a5601-2b24-456a-850e-e44e934e3fe2:Gizmo/Materials/Mat_TranslateZ
+                        Materials: {}
                     60dbf1312952458f701f4a75ded0956c: !RigidbodyComponent
                         Id: a688a877-e882-4609-a6da-3f1eaf5d4bea
                         CollisionGroup: CustomFilter1

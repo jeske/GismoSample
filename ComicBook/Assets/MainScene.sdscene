@@ -200,6 +200,5 @@ Hierarchy:
                         TouchRotationSpeed: {X: 1.0, Y: 0.7}
                     30607097391cc34427e9092745368c63: !ComicBook.MainBehaviorScript,ComicBook
                         Id: 359981ba-f8e9-45f0-ab9b-619061c9bd06
-                        RotationSpeed: 10.0
                         SelectedEntity: null
                         HighlightedEntity: null

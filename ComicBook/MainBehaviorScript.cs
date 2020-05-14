@@ -10,6 +10,7 @@ using Stride.Physics;
 using System.Diagnostics;
 using Stride.Rendering;
 using Stride.DebugDrawer;
+using Stride.Games;
 
 namespace ComicBook
 {
@@ -130,7 +131,7 @@ namespace ComicBook
             }
 
             // gizmo
-            gizmo = new TransformGizmo(Content, Entity.Scene, Entity, Content.Load<Prefab>("Gizmo/TransformGizmo"));
+            gizmo = new TransformGizmo(GraphicsDevice, Content, Entity.Scene, Entity, Content.Load<Prefab>("Gizmo/TransformGizmo"));
         }
 
         public override void Update()

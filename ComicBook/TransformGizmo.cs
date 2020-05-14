@@ -1,8 +1,11 @@
 ﻿using Stride.Core.Mathematics;
 using Stride.Core.Serialization.Contents;
 using Stride.Engine;
+using Stride.Games;
+using Stride.Graphics;
 using Stride.Rendering;
 using Stride.Rendering.Materials;
+using Stride.Rendering.Materials.ComputeColors;
 using System;
 using System.Collections.Generic;
 
@@ -13,7 +16,13 @@ namespace ComicBook
     /// </summary>
     class TransformGizmo
     {
+        readonly Color ColorAxisX = Color.Red;
+        readonly Color ColorAxisY = Color.Green;
+        readonly Color ColorAxisZ = Color.Blue;
+        readonly Color ColorAxisC = Color.White;
+
         readonly Entity gizmoRoot;
+        readonly GraphicsDevice graphicsDevice;
         readonly Scene scene;
 
         bool isVisible;
@@ -22,8 +31,9 @@ namespace ComicBook
         Dictionary<Entity, GizmoModes> gizmoModesDict;
         Dictionary<GizmoModes, Entity> gizmoEntitiesDict;
 
-        public TransformGizmo(ContentManager contentManager, Scene scene, Entity camera, Prefab prefab)
+        public TransformGizmo(GraphicsDevice graphicsDevice, ContentManager contentManager, Scene scene, Entity camera, Prefab prefab)
         {
+            this.graphicsDevice = graphicsDevice ?? throw new ArgumentNullException(nameof(graphicsDevice));
             this.scene = scene ?? throw new ArgumentNullException(nameof(scene));
             Camera = camera ?? throw new ArgumentNullException(nameof(camera));
 
@@ -57,6 +67,19 @@ namespace ComicBook
             {
                 gizmoEntitiesDict.Add(gizmoModesDict[k], k);
             }
+
+            // set materials
+            SetEntityMaterial("TranslationX", ColorAxisX);
+            SetEntityMaterial("TranslationYZ", ColorAxisX);
+            SetEntityMaterial("RotationX", ColorAxisX);
+            SetEntityMaterial("TranslationY", ColorAxisY);
+            SetEntityMaterial("TranslationXZ", ColorAxisY);
+            SetEntityMaterial("RotationY", ColorAxisY);
+            SetEntityMaterial("TranslationZ", ColorAxisZ);
+            SetEntityMaterial("TranslationXY", ColorAxisZ);
+            SetEntityMaterial("RotationZ", ColorAxisZ);
+            SetEntityMaterial("TranslationCC", ColorAxisC);
+            SetEntityMaterial("RotationC", ColorAxisC);
 
             // initialize
             mode = GizmoModes.None;
@@ -238,6 +261,20 @@ namespace ComicBook
             {
                 gizmoEntitiesDict[mode].Get<ModelComponent>().Materials[0].Passes[0].Parameters.Set(MaterialKeys.EmissiveIntensity, 1.0f);
             }
+        }
+        
+        private Material CreateSolidMaterial(Color color)
+        {
+            var descriptor = new MaterialDescriptor();
+            var computeColor = new ComputeColor(color);
+            descriptor.Attributes.Emissive = new MaterialEmissiveMapFeature(computeColor);
+
+            return Material.New(graphicsDevice, descriptor);
+        }
+
+        private void SetEntityMaterial(string name, Color color)
+        {
+            gizmoRoot.FindChild(name).Get<ModelComponent>().Materials[0] = CreateSolidMaterial(color);
         }
 
         public Entity Camera { get; set; }
