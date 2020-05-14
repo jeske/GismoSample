@@ -4,6 +4,7 @@ using Stride.Core.Serialization.Contents;
 using Stride.Engine;
 using Stride.Games;
 using Stride.Graphics;
+using Stride.Physics;
 using Stride.Rendering;
 using Stride.Rendering.Materials;
 using Stride.Rendering.Materials.ComputeColors;
@@ -85,7 +86,7 @@ namespace ComicBook
 
             // initialize
             mode = GizmoModes.None;
-            SetGizmoMode(GizmoModes.None);
+            SetGizmoMode(GizmoModes.None);            
         }
 
         private Quaternion GetLookAtAngleQuat(Vector3 eye, Vector3 target)
@@ -99,24 +100,30 @@ namespace ComicBook
 
         public void Update()
         {
-            gizmoRoot.Transform.Scale = new Vector3(1.0f); // TODO viewport-relative size
+            // scaling
+            gizmoRoot.Transform.Scale = new Vector3(0.25f); // TODO viewport-relative size
+            foreach (Entity entity in gizmoModesDict.Keys)
+            {
+                // only works if we are updating it every frame
+                entity.Get<RigidbodyComponent>().CanScaleShape = true;
+            }
 
             // rotation ring and translation square that look at camera
             Entity rotationRing = gizmoEntitiesDict[GizmoModes.RotationCamera];
             Quaternion lookAtCameraRot = GetLookAtAngleQuat(rotationRing.Transform.GetWorldPosition(), Camera.Transform.GetWorldPosition());
             Quaternion rotZero = Quaternion.RotationYawPitchRoll(0.0f, 90.0f * 3.14f / 180.0f, 0.0f);
-            
+
             // respect root entity rotation
             Quaternion rootRotation = gizmoRoot.Transform.Rotation;
             rootRotation.Invert();
-            
+
             rotationRing.Transform.Rotation = rotZero * lookAtCameraRot * rootRotation;
         }
 
         public Plane GetTranslationPlane()
         {
             Vector3 normal;
-            
+
             switch (Mode)
             {
                 case GizmoModes.TranslationX:
@@ -264,7 +271,7 @@ namespace ComicBook
                 gizmoEntitiesDict[mode].Get<ModelComponent>().Materials[0].Passes[0].Parameters.Set(MaterialKeys.EmissiveIntensity, 1.0f);
             }
         }
-        
+
         private Material CreateSolidMaterial(Color color)
         {
             var descriptor = new MaterialDescriptor();
