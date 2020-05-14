@@ -27,6 +27,7 @@ Hierarchy:
                     6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
                         Id: 132b8b4d-df9a-4b9d-bbd4-4bd462a0825a
                         Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        RenderGroup: Group1
                         IsShadowCaster: false
                         Materials: {}
         -   Entity:
@@ -42,6 +43,7 @@ Hierarchy:
                     6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
                         Id: bcd4ebed-69fa-4729-8f1b-00a6f740e989
                         Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        RenderGroup: Group1
                         IsShadowCaster: false
                         Materials: {}
         -   Entity:
@@ -57,6 +59,7 @@ Hierarchy:
                     6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
                         Id: a7558ba4-e37c-4236-8ace-d8e4668e497a
                         Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        RenderGroup: Group1
                         IsShadowCaster: false
                         Materials: {}
         -   Entity:
@@ -72,6 +75,7 @@ Hierarchy:
                     6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
                         Id: 3c7755b2-d5b3-4c21-bf21-af8e57e84ddc
                         Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        RenderGroup: Group1
                         IsShadowCaster: false
                         Materials: {}
         -   Entity:
@@ -87,6 +91,7 @@ Hierarchy:
                     6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
                         Id: 3cc9fec7-04b3-4d84-937c-8994ae71c082
                         Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        RenderGroup: Group1
                         IsShadowCaster: false
                         Materials: {}
         -   Folder: null
@@ -103,6 +108,7 @@ Hierarchy:
                     6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
                         Id: 57b10676-50a5-4e5e-b2c9-dea7c76c6080
                         Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        RenderGroup: Group1
                         IsShadowCaster: false
                         Materials: {}
         -   Entity:
@@ -118,6 +124,7 @@ Hierarchy:
                     6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
                         Id: 5318be13-7139-413d-8546-a1cb45ca385a
                         Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        RenderGroup: Group1
                         IsShadowCaster: false
                         Materials: {}
         -   Entity:
@@ -133,5 +140,6 @@ Hierarchy:
                     6b35562b5e85d30eab62516cf57c3b91: !ModelComponent
                         Id: e128ea07-78f4-46da-b128-7c9fe5e177a4
                         Model: 1a928305-5422-4d88-8158-0519e82112fe:Gizmo/SelectionMarker
+                        RenderGroup: Group1
                         IsShadowCaster: false
                         Materials: {}

@@ -1,4 +1,5 @@
-﻿using Stride.Core.Mathematics;
+﻿using SharpDX.Direct3D11;
+using Stride.Core.Mathematics;
 using Stride.Core.Serialization.Contents;
 using Stride.Engine;
 using Stride.Games;
@@ -6,6 +7,7 @@ using Stride.Graphics;
 using Stride.Rendering;
 using Stride.Rendering.Materials;
 using Stride.Rendering.Materials.ComputeColors;
+using Stride.Shaders;
 using System;
 using System.Collections.Generic;
 
@@ -267,7 +269,13 @@ namespace ComicBook
         {
             var descriptor = new MaterialDescriptor();
             var computeColor = new ComputeColor(color);
+
+            var transparency = new MaterialTransparencyBlendFeature();
+            transparency.Tint = new ComputeColor(Color.White);
+            transparency.Alpha = new ComputeFloat(0.25f);
+
             descriptor.Attributes.Emissive = new MaterialEmissiveMapFeature(computeColor);
+            descriptor.Attributes.Transparency = transparency;
 
             return Material.New(graphicsDevice, descriptor);
         }

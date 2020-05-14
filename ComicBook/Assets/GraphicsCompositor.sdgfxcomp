@@ -38,9 +38,14 @@ RenderStages:
         Name: GBuffer
         EffectSlotName: GBuffer
         SortMode: !FrontToBackSortMode {}
-    9a6a0a1cf7e394b1c0879e3bc31658b2*:
-        Id: c6ade9d9-f938-4672-b03a-0fa3c853c0ec
-        Name: GizmoStage
+    cde8addf50a5313a9de8c8f6e280fffd*:
+        Id: c98ace3b-ddea-4c82-90f9-29cfca8105f8
+        Name: OverlayStageOpaque
+        EffectSlotName: Main
+        SortMode: !SortModeStateChange {}
+    336dbc92c6e5f24755c2eac4902d6ed9*:
+        Id: 6b613604-d13a-4d2b-931f-911a3dd954a3
+        Name: OverlayStageTransparent
         EffectSlotName: Main
         SortMode: !BackToFrontSortMode {}
 RenderFeatures:
@@ -50,7 +55,7 @@ RenderFeatures:
                 RenderGroup*: Group0, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29, Group30, Group31
                 OpaqueRenderStage: ref!! 50671147-a5c1-49d4-b4ad-3625f71439b3
                 TransparentRenderStage: ref!! 0fa30591-02ee-486d-9347-2b6aee83d035
-                EffectName: StrideForwardShadingEffect
+                EffectName*: StrideForwardShadingEffect
             6f7224048750e7260ea87c444f74b32c: !Stride.Rendering.Shadows.ShadowMapRenderStageSelector,Stride.Rendering
                 ShadowMapRenderStage: ref!! c0524e55-4061-464d-84dd-7c4c70f70e0e
                 EffectName: StrideForwardShadingEffect.ShadowMapCaster
@@ -69,7 +74,8 @@ RenderFeatures:
                 EffectName: StrideForwardShadingEffect.ShadowMapCaster
             c8e46799586a17ce53e1313d94d401aa*: !Stride.Rendering.MeshTransparentRenderStageSelector,Stride.Rendering
                 RenderGroup: Group1
-                OpaqueRenderStage: ref!! c6ade9d9-f938-4672-b03a-0fa3c853c0ec
+                OpaqueRenderStage: ref!! c98ace3b-ddea-4c82-90f9-29cfca8105f8
+                TransparentRenderStage: ref!! 6b613604-d13a-4d2b-931f-911a3dd954a3
                 EffectName: StrideForwardShadingEffect
         PipelineProcessors:
             d70f5aee0616e4ab25081ceaf643290c: !Stride.Rendering.MeshPipelineProcessor,Stride.Rendering
@@ -211,11 +217,11 @@ SharedRenderers:
             Id: 6b45e009-185a-4cf5-893e-e6ab1816e661
             ClearFlags: DepthOnly
             Color: {R: 0.403921574, G: 0.4117647, B: 0.435294122, A: 1.0}
-        LightProbes: true
-        OpaqueRenderStage: ref!! c6ade9d9-f938-4672-b03a-0fa3c853c0ec
-        TransparentRenderStage: null
+        LightProbes: false
+        OpaqueRenderStage: ref!! c98ace3b-ddea-4c82-90f9-29cfca8105f8
+        TransparentRenderStage: ref!! 6b613604-d13a-4d2b-931f-911a3dd954a3
         ShadowMapRenderStages: {}
-        GBufferRenderStage: null
+        GBufferRenderStage: ref!! 0fd29cfa-e18c-4936-a1ff-706523f5ea8e
         PostEffects: null
         LightShafts: null
         VRSettings:
