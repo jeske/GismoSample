@@ -197,8 +197,6 @@ namespace ComicBook
                 gizmo.Mode = gizmo.GetGizmoModeForEntity(gizmoEntity);
             }
 
-            DebugUpdate();
-
             // move gizmo to manipulation entity
             if (manipulationEntity != null)
             {
@@ -353,31 +351,6 @@ namespace ComicBook
                     entity.Transform.Rotation = transform0.Rotation * rotation;
                 }
             }
-        }
-
-        private void DebugUpdate()
-        {
-            if (gizmo.IsTranslationMode && FindMouseRayIntersectionWithAxisPlane(out Vector3 pos, translationPlane, gizmo.Mode))
-            {
-                DebugDrawerSystem.DrawBox(pos, 0.1f, Color.Yellow);
-                DebugDrawerSystem.DrawPlane(gizmo.Root.Transform.GetWorldPosition(), translationPlane.Normal, 3.0f, Color.Yellow);
-            }
-
-            if (gizmo.IsRotationMode && FindMouseRayIntersectionWithAxisPlane(out Vector3 p, rotationPlane, gizmo.Mode))
-            {
-                DebugDrawerSystem.DrawBox(p, 0.1f, Color.Yellow);
-                DebugDrawerSystem.DrawPlane(gizmo.Root.Transform.GetWorldPosition(), rotationPlane.Normal, 3.0f, Color.Yellow);
-            }
-
-            Vector3 axis = gizmo.GetTransformAxis();
-            DebugDrawerSystem.DrawLine(axis * -10.0f + gizmo.Root.Transform.Position, axis * 10.0f + gizmo.Root.Transform.Position, Color.Red);
-
-            Vector3 axisX = gizmo.GetTransformAxis(GizmoModes.TranslationX);
-            Vector3 axisY = gizmo.GetTransformAxis(GizmoModes.TranslationY);
-            Vector3 axisZ = gizmo.GetTransformAxis(GizmoModes.TranslationZ);
-            DebugDrawerSystem.DrawAxis(axisX, gizmo.Root.Transform.Position, Color.Red);
-            DebugDrawerSystem.DrawAxis(axisY, gizmo.Root.Transform.Position, Color.Green);
-            DebugDrawerSystem.DrawAxis(axisZ, gizmo.Root.Transform.Position, Color.Blue);
         }
     }
 }

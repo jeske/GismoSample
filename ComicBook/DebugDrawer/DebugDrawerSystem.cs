@@ -87,12 +87,6 @@ namespace Stride.DebugDrawer
             Instance.Add(line);
         }
 
-        public static void DrawAxis(Vector3 axis, Vector3 origin, Color color, float lifetime = -1.0f)
-        {
-            axis.Normalize();
-            DrawLine(axis * -100.0f + origin, axis * 100.0f + origin, color, lifetime);
-        }
-
         public static void DrawBox(Vector3 position, Vector3 scale, Color color, float lifetime = -1.0f)
         {
             Box box = new Box(position, scale, color);
