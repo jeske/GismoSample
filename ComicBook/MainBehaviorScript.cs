@@ -26,6 +26,7 @@ namespace ComicBook
 
         Entity manipulationEntity;
         TransformTRS entityTransform0;
+        Vector3 transformAxis;
         Vector3 entityOffset;
         Vector3 gizmoOffset0, gizmoOffset;
         Vector2 mousePositionPrev;
@@ -152,6 +153,7 @@ namespace ComicBook
                             : SelectedEntity;
 
                         entityTransform0 = manipulationEntity.Transform.GetWorldTransformation();
+                        transformAxis = gizmo.GetTransformAxis();
 
                         // translation
                         if (gizmo.IsTranslationMode)
@@ -351,9 +353,9 @@ namespace ComicBook
                 // rotation around gizmo center in screen-space
                 Vector2 rotCenter = gizmo.Position.ProjectToScreen(camera);
                 float delta = Helpers.AngleBetween(mousePositionPrev - rotCenter, Input.MousePosition - rotCenter);
-
+                
                 // negate rotation delta if we are rotating from gizmo back side
-                Vector3 screenSpaceFactor = Vector3.TransformNormal(gizmo.GetTransformAxis(), camera.ViewProjectionMatrix);
+                Vector3 screenSpaceFactor = Vector3.TransformNormal(transformAxis, camera.ViewProjectionMatrix);
                 if (screenSpaceFactor.Z > 0.0f)
                 {
                     delta = -delta;
