@@ -15,8 +15,6 @@ namespace ComicBook
 {
     public class MainBehaviorScript : SyncScript
     {
-        public float RotationSpeed = 10.0f;
-
         Entity selectedEntity, highlightedEntity;
         CameraComponent camera;
         Simulation simulation;
@@ -30,8 +28,7 @@ namespace ComicBook
         TransformTRS entityTransform0;
         Vector3 entityOffset;
         Vector3 gizmoOffset0, gizmoOffset;
-        Vector2 mousePosition0;
-        Vector3 mousePlaneIntersectionPrev;
+        Vector2 mousePositionPrev;
         float rotationAccumulator;
 
         /// <summary>
@@ -132,7 +129,6 @@ namespace ComicBook
                             ? gizmo.Root
                             : SelectedEntity;
 
-                        mousePosition0 = Input.MousePosition;
                         entityTransform0 = manipulationEntity.Transform.GetWorldTransformation();
 
                         // translation
@@ -165,7 +161,6 @@ namespace ComicBook
                             {
                                 // rotation mode start
                                 gizmoOffset0 = gizmoOffset;
-                                mousePlaneIntersectionPrev = p;
                                 rotationAccumulator = 0.0f;
                             }
                         }
@@ -227,6 +222,7 @@ namespace ComicBook
             }
 
             gizmo.Update();
+            mousePositionPrev = Input.MousePosition;
         }
 
         private Vector3[] ProjectMouseToWorld()
@@ -332,34 +328,29 @@ namespace ComicBook
             // rotation
             else if (gizmo.IsRotationMode)
             {
-                if (FindMouseRayIntersectionWithAxisPlane(out Vector3 p, rotationPlane, gizmo.Mode))
+                // rotation around gizmo center in screen-space
+                Vector2 rotCenter = gizmo.Position.ProjectToScreen(camera);
+                float delta = Helpers.AngleBetween(mousePositionPrev - rotCenter, Input.MousePosition - rotCenter);
+
+                // negate rotation delta if we are rotating from gizmo back side
+                Vector3 screenSpaceFactor = Vector3.TransformNormal(gizmo.GetTransformAxis(), camera.ViewProjectionMatrix);
+                if (screenSpaceFactor.Z > 0.0f)
                 {
-                    float delta = Helpers.AngleBetween(p, mousePlaneIntersectionPrev);
-                    //Debug.WriteLine(delta);
-                    /*
-                    Vector2 a = p.ProjectToScreen(camera);
-                    Vector2 b = mousePlaneIntersectionPrev.ProjectToScreen(camera);
-                    if (Helpers.AngleBetween(a, b) < 0.0f)
-                    {
-                        delta = -delta;
-                    }
-                    */
+                    delta = -delta;
+                }
 
-                    rotationAccumulator += delta;
-                    mousePlaneIntersectionPrev = p;
+                rotationAccumulator += delta;
+                Quaternion rotation = Quaternion.RotationAxis(axis, -rotationAccumulator);
+                entity.Transform.Rotation = transform0.Rotation * rotation;
 
-                    Quaternion rotation = Quaternion.RotationAxis(axis * 10.0f, -(rotationAccumulator));
+                if (entity != gizmo.Root)
+                {
+                    gizmoOffset = gizmoOffset0;
+                    rotation.Rotate(ref gizmoOffset);
+                }
+                else
+                {
                     entity.Transform.Rotation = transform0.Rotation * rotation;
-
-                    if (entity != gizmo.Root)
-                    {
-                        gizmoOffset = gizmoOffset0;
-                        rotation.Rotate(ref gizmoOffset);
-                    }
-                    else
-                    {
-                        entity.Transform.Rotation = transform0.Rotation * rotation;
-                    }
                 }
             }
         }

@@ -88,14 +88,12 @@ namespace ComicBook
         }
 
         /// <summary>
-        /// Returns angle in radians
+        /// Returns angle in radians. Values are always >= 0
         /// </summary>
         public static float AngleBetween(Vector3 vector1, Vector3 vector2)
         {
             vector1.Normalize();
             vector2.Normalize();
-
-            Debug.WriteLine(Vector3.Dot(vector1, vector2));
 
             return Vector3.Dot(vector1, vector2) < 0.0f
                 ? 3.1415927f - 2.0f * (float)Math.Asin((-vector1 - vector2).Length() / 2.0f)

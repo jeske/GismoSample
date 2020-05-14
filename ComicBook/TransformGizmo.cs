@@ -253,6 +253,16 @@ namespace ComicBook
             }
         }
 
+        public Vector3 Position {
+            get { return Root.Transform.Position; }
+            set { Root.Transform.Position = value; }
+        }
+
+        public Quaternion Rotation {
+            get { return Root.Transform.Rotation; }
+            set { Root.Transform.Rotation = value; }
+        }
+
         public bool IsTranslationMode {
             get {
                 return Mode == GizmoModes.TranslationX
