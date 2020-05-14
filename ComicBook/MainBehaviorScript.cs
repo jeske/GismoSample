@@ -31,6 +31,8 @@ namespace ComicBook
         Vector2 mousePositionPrev;
         float rotationAccumulator;
 
+        Dictionary<Guid, TransformTRS> gizmoTransforms = new Dictionary<Guid, TransformTRS>();
+
         /// <summary>
         /// Entity for manipulation
         /// </summary>
@@ -42,6 +44,12 @@ namespace ComicBook
                     return;
                 }
 
+                // save offsets from prev entity
+                if (selectedEntity != null)
+                {
+                    gizmoTransforms[selectedEntity.Id] = new TransformTRS(gizmoOffset, gizmo.Rotation, Vector3.One);
+                }
+
                 selectedEntity = value;
                 if (selectionBox != null)
                 {
@@ -49,9 +57,23 @@ namespace ComicBook
                     if (gizmo != null && selectedEntity != null)
                     {
                         gizmo.IsVisible = true;
-                        gizmo.Root.Transform.Position = selectedEntity.Transform.GetWorldPosition();
-                        gizmo.Root.Transform.Rotation = Quaternion.Identity;
-                        gizmoOffset = gizmoOffset0 = Vector3.Zero;
+
+                        // do we have saved offsets?
+                        if (gizmoTransforms.ContainsKey(selectedEntity.Id))
+                        {
+                            // load offsets
+                            TransformTRS savedOffsets = gizmoTransforms[selectedEntity.Id];
+                            gizmoOffset = gizmoOffset0 = savedOffsets.Position;
+                            gizmo.Position = selectedEntity.Transform.GetWorldPosition() - gizmoOffset;
+                            gizmo.Rotation = savedOffsets.Rotation;
+                        }
+                        else
+                        {
+                            // there are no saved offsets, set zero offsets
+                            gizmoOffset = gizmoOffset0 = Vector3.Zero;
+                            gizmo.Position = selectedEntity.Transform.GetWorldPosition();
+                            gizmo.Rotation = Quaternion.Identity;
+                        }
                     }
                     else
                     {
